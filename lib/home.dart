@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/about.dart';
+import 'package:myapp/galeri.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -50,6 +51,19 @@ class _HomePageState extends State<HomePage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => About(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.photo),
+              title: Text('Galeri Foto'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GalleryPage(),
                   ),
                 );
               },
