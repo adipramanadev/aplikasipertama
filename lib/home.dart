@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/about.dart';
 import 'package:myapp/galeri.dart';
+import 'package:myapp/mycard.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -72,7 +73,11 @@ class _HomePageState extends State<HomePage> {
               leading: Icon(Icons.favorite),
               title: Text('Favorite'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => MyCard(),
+                  ),
+                );
               },
             ),
             ListTile(
